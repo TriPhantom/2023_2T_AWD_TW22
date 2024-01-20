@@ -28,8 +28,8 @@
             box-sizing: border-box;
             margin-bottom: 50px;
             display: flex;
-            flex-direction: column; /* Display header, contact-info, photo, line, and section in a column */
-            align-items: center; /* Center content horizontally */
+            flex-direction: column; 
+            align-items: center;
         }
 
         header {
@@ -47,14 +47,14 @@
 
         #contact-info {
             display: flex;
-            flex-direction: row; /* Arrange contact info horizontally */
-            align-items: center; /* Center contact info vertically */
+            flex-direction: row;
+            align-items: center; 
             width: 100%;
             padding: 20px;
         }
 
         #photo {
-            text-align: right; /* Place your photo on the right side */
+            text-align: right;
             margin-top: 20px;
         }
 
