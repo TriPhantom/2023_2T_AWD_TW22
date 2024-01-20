@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My New Resume</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha384-ez-3NRICVTBtPz2zf3A9XOx9OHod+5BzScNQp1CvbdKo1u8bDYU0z2zHIfLm11fl" crossorigin="anonymous">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-color: #ffffff;
+            color: #000000;
+        }
+
+        #resume-container {
+            border: 2px solid #333;
+            overflow: hidden;
+            width: 80%;
+            box-sizing: border-box;
+            margin-bottom: 50px;
+            display: flex;
+            flex-direction: column; /* Display header, contact-info, photo, line, and section in a column */
+            align-items: center; /* Center content horizontally */
+        }
+
+        header {
+            text-align: left;
+            padding: 20px;
+            background-color: #202020;
+            color: #f7bb08;
+            width: 100%;
+        }
+
+        header h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+
+        #contact-info {
+            display: flex;
+            flex-direction: row; /* Arrange contact info horizontally */
+            align-items: center; /* Center contact info vertically */
+            width: 100%;
+            padding: 20px;
+        }
+
+        #photo {
+            text-align: right; /* Place your photo on the right side */
+            margin-top: 20px;
+        }
+
+        #photo img {
+            width: 200px;
+            height: 250px;
+        }
+
+        #line {
+            border-bottom: 2px solid #f7bb08;
+            width: 100%;
+            margin: 20px 0;
+            transition: border-color 0.5s;
+        }
+
+        section {
+            padding: 20px;
+            background-color: #ffffff;
+            margin: 10px;
+            color: #000000;
+            width: 100%;
+            transition: background-color 0.5s, color 0.5s;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            margin: 10px 0;
+        }
+
+        #changeColorBtn {
+            margin: 10px;
+            padding: 10px;
+            cursor: pointer;
+            align-self: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="resume-container">
+        <header>
+            <h1>Josh Steven S. Sy</h1>
+        </header>
+
+        <div id="contact-info" class="contact-info">
+            <ul>
+                <li><i class="fa fa-map-marker"></i>910 unit A3 Luzon Street, Sta. Cruz, Manila</li>
+                <li><i class="fa fa-envelope"></i>joshstevensy@gmail.com</li>
+                <li><i class="fa fa-phone"></i>09687471275</li>
+            </ul>
+
+            <div id="photo">
+                <img src="SY_FEU Uniform pic retake2.jpeg" alt="Profile Picture">
+            </div>
+        </div>
+
+        <div id="line"></div>
+
+        <section>
+            <h2>Summary</h2>
+            <p>An introvert web developer with 6 years of experience in creating responsive and user-friendly websites.
+                Proficient in HTML, CSS, C++, Java, and popular web development frameworks. Strong problem-solving skills
+                and a passion for creating high-quality websites.</p>
+
+            <h2>Experience</h2>
+            <ul>
+                <li>
+                    <h3>Web Developer - ABC Company, Anytown, USA (2018 - Present)</h3>
+                    <p>Developed and maintained company website using HTML, CSS, and JavaScript. Implemented responsive
+                        design and improved website performance. Collaborated with the marketing team to develop landing
+                        pages and email templates.</p>
+                </li>
+                <li>
+                    <h3>Front-End Developer - XYZ Agency, Anytown, USA (2015 - 2018)</h3>
+                    <p>Created custom WordPress themes using HTML, CSS, and PHP. Implemented responsive design and
+                        optimized website performance. Worked with clients to develop website design and functionality.</p>
+                </li>
+            </ul>
+
+            <h2>Skills</h2>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>C++</li>
+                <li>Java</li>
+                <li>JavaScript</li>
+                <li>Python</li>
+                <li>SQL</li>
+            </ul>
+        </section>
+    </div>
+
+    <button id="changeColorBtn" onclick="changeColor()">Change Color</button>
+
+    <script>
+        function changeColor() {
+            var container = document.getElementById('resume-container');
+            var section = document.querySelector('section');
+            var header = document.querySelector('header');
+            var line = document.getElementById('line');
+
+            if (container.style.backgroundColor === 'rgb(255, 255, 255)') {
+                // Change to dark mode
+                container.style.backgroundColor = '#202020';
+                section.style.backgroundColor = '#202020';
+                header.style.backgroundColor = '#202020';
+                line.style.borderColor = '#202020';
+                container.style.color = '#f7bb08';
+                section.style.color = '#f7bb08';
+                header.style.color = '#f7bb08';
+            } else {
+                // Change to light mode
+                container.style.backgroundColor = '#ffffff';
+                section.style.backgroundColor = '#ffffff';
+                header.style.backgroundColor = '#202020';
+                line.style.borderColor = '#f7bb08';
+                container.style.color = '#000000';
+                section.style.color = '#000000';
+                header.style.color = '#f7bb08';
+            }
+        }
+    </script>
+</body>
+
+</html>
